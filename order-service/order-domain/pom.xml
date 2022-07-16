@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>com.food.ordering.system</groupId>
-            <artifactId>ommon-domain</artifactId>
+            <artifactId>common-domain</artifactId>
         </dependency>
     </dependencies>
 
