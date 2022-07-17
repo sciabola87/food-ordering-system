@@ -40,7 +40,7 @@ public class OrderDomainServiceImpl implements OrderDomainService {
     @Override
     public void approveOrder(Order order) {
         order.approve();
-        log.info("Order with id: {} is appoved", order.getId().getValue());
+        log.info("Order with id: {} is approved", order.getId().getValue());
     }
 
     @Override
@@ -58,7 +58,7 @@ public class OrderDomainServiceImpl implements OrderDomainService {
 
     private void validateRestaurant(Restaurant restaurant) {
         if (!restaurant.isActive()){
-            throw new OrderDomainException("Resturant with id "+ restaurant.getId().getValue() +
+            throw new OrderDomainException("Restaurant with id "+ restaurant.getId().getValue() +
                     " is currently not active!");
         }
     }
