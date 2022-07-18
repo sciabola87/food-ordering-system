@@ -7,6 +7,7 @@ import lombok.Getter;
 
 import java.math.BigDecimal;
 import java.time.Instant;
+import java.util.List;
 
 @Getter
 @Builder
@@ -21,5 +22,7 @@ public class PaymentResponse {
     private BigDecimal price;
     private Instant createAt;
     private PaymentStatus paymentStatus;
+    private List<String> failureMessages;
+
 
 }
