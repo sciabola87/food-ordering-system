@@ -1,5 +1,5 @@
 INSERT INTO customer.customers(id, username, first_name, last_name)
-    VALE('4a85cea2-0638-11ed-b939-0242ac120002','user_1','First','User');
+    VALE('d215b5f8-0249-4dc5-89a3-51fd148cfb41','user_1','First','User');
 
     INSERT INTO customer.customers(id, username, first_name, last_name)
-        VALE('4a85d046-0638-11ed-b939-0242ac120002','user_2','Second','User');
+        VALE('d215b5f8-0249-4dc5-89a3-51fd148cfb43','user_2','Second','User');
