@@ -162,6 +162,13 @@
                 <version>${project.version}</version>
             </dependency>
 
+            <!--                    OUTBOX                      -->
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>outbox</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
