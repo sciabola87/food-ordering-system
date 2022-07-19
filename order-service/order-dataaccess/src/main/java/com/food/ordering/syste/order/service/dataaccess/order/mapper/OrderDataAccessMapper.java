@@ -48,7 +48,7 @@ public class OrderDataAccessMapper {
         return Order.builder()
                 .orderId( new OrderId(orderEntity.getId()))
                 .customerId( new CustomerId(orderEntity.getCustomerId()))
-                .resturantId( new ResturantId((orderEntity.getRestaurantId())))
+                .resturantId( new RestaurantId((orderEntity.getRestaurantId())))
                 .deliveryAddress(addressEntityToDeliveryAddress(orderEntity.getAddress()))
                 .price(new Money(orderEntity.getPrice()))
                 .items(orderItemEntitiesToOrderItems(orderEntity.getItems()))

@@ -3,7 +3,7 @@ package com.food.ordering.system.order.service.domain.mapper;
 import com.food.ordering.system.domain.valueobject.CustomerId;
 import com.food.ordering.system.domain.valueobject.Money;
 import com.food.ordering.system.domain.valueobject.ProductId;
-import com.food.ordering.system.domain.valueobject.ResturantId;
+import com.food.ordering.system.domain.valueobject.RestaurantId;
 import com.food.ordering.system.order.service.domain.dto.create.CreateOrderCommand;
 import com.food.ordering.system.order.service.domain.dto.create.CreateOrderResponse;
 import com.food.ordering.system.order.service.domain.dto.create.OrderAddress;
@@ -24,7 +24,7 @@ public class OrderDataMapper {
 
     public Restaurant createOrderCommandToRestaurant(CreateOrderCommand createOrderCommand){
         return Restaurant.builder()
-                .restaurantId(new ResturantId(createOrderCommand.getRestaurantId()))
+                .restaurantId(new RestaurantId(createOrderCommand.getRestaurantId()))
                 .products(createOrderCommand.getItems().stream().map(orderItem ->
                         new Product(new ProductId(orderItem.getProductId())))
                         .collect(Collectors.toList())
@@ -35,7 +35,7 @@ public class OrderDataMapper {
     public Order createOrderCommandToOrder(CreateOrderCommand createOrderCommand){
         return Order.builder()
                 .customerId(new CustomerId(createOrderCommand.getCustomerId()))
-                .resturantId(new ResturantId(createOrderCommand.getRestaurantId()))
+                .resturantId(new RestaurantId(createOrderCommand.getRestaurantId()))
                 .deliveryAddress(orderAddressToSteetAddress(createOrderCommand.getAddress()))
                 .price(new Money(createOrderCommand.getPrice()))
                 .items(orderItemsToOrderItemEntities(createOrderCommand.getItems()))

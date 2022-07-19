@@ -18,5 +18,8 @@
         <module>restaurant-messaging</module>
     </modules>
 
+    <dependencies>
 
+
+    </dependencies>
 </project>

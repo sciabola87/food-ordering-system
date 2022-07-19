@@ -1,6 +1,6 @@
 package com.food.ordering.system.payment.service.domain.entity;
 
-import com.food.ordering.system.domain.entity.AggreateRoot;
+import com.food.ordering.system.domain.entity.AggregateRoot;
 import com.food.ordering.system.domain.valueobject.CustomerId;
 import com.food.ordering.system.domain.valueobject.Money;
 import com.food.ordering.system.domain.valueobject.OrderId;
@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.UUID;
 
-public class Payment extends AggreateRoot<PaymentId> {
+public class Payment extends AggregateRoot<PaymentId> {
 
     private final OrderId orderId;
     private final CustomerId customerId;

@@ -133,7 +133,7 @@ public class OrderApplicationServiceTest {
         customer.setId(new CustomerId(CUSTOMER_ID));
 
         Restaurant restaurantResponse = Restaurant.builder()
-                .restaurantId(new ResturantId(createOrderCommand.getRestaurantId()))
+                .restaurantId(new RestaurantId(createOrderCommand.getRestaurantId()))
                 .products(List.of(new Product(new ProductId(PRODUCT_ID),"product_1",new Money(new BigDecimal("50.00"))),
                         new Product(new ProductId(PRODUCT_ID),"product_2", new Money(new BigDecimal("50.00")))))
                 .active(true)
@@ -177,7 +177,7 @@ public class OrderApplicationServiceTest {
     @Test
     public void testCreateOrderWithPassiveRestaurant(){
         Restaurant restaurant = Restaurant.builder()
-                .restaurantId(new ResturantId(createOrderCommand.getRestaurantId()))
+                .restaurantId(new RestaurantId(createOrderCommand.getRestaurantId()))
                 .products(List.of(new Product(new ProductId(PRODUCT_ID),"product_1",new Money(new BigDecimal("50.00"))),
                         new Product(new ProductId(PRODUCT_ID),"product_2", new Money(new BigDecimal("50.00")))))
                 .active(false)
