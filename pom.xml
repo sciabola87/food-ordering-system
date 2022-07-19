@@ -154,6 +154,14 @@
                 <artifactId>kafka-config-data</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <!--                    SAGA                      -->
+            <dependency>
+                <groupId>com.food.ordering.system</groupId>
+                <artifactId>saga</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

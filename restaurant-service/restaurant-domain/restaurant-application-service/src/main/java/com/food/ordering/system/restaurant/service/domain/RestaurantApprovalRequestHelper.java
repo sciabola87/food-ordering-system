@@ -52,12 +52,12 @@ public class RestaurantApprovalRequestHelper {
         Restaurant restaurant = findRestaurant(restaurantApprovalRequest);
 
         //TODO corregere qusto errore per poter procedere con la verifica
-        Optional<OrderApprovalEvent> orderApprovalEvent = null;
-        //OrderApprovalEvent orderApprovalEvent = restaurantDomainService.validateOrder(restaurant, failureMessages,
-        //        orderApprovedMessagePublisher,orderRejectedMessagePublisher);
+        OrderApprovalEvent orderApprovalEvent = restaurantDomainService.validateOrder(restaurant,
+                failureMessages, orderApprovedMessagePublisher, orderRejectedMessagePublisher);
+
 
         orderApprovalRepository.save(restaurant.getOrderApproval());
-        return orderApprovalEvent.get();
+        return orderApprovalEvent;
     }
 
     private Restaurant findRestaurant(RestaurantApprovalRequest restaurantApprovalRequest) {
@@ -81,7 +81,6 @@ public class RestaurantApprovalRequestHelper {
         }));
 
         restaurant.getOrderDetail().setId(new OrderId(UUID.fromString(restaurantApprovalRequest.getOrderId())));
-
         return restaurant;
     }
 }
